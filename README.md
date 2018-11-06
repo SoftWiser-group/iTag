@@ -19,7 +19,7 @@ Keras 2.1.6
 |utils.py|This file helps to obtain the one-hot representation of  tags.|
 
 ## Model
-![Image text](https://github.com/SoftWiser-group/iTag/blob/master/images/structure.jpg)
+![Image text](https://github.com/SoftWiser-group/iTag/blob/master/images/new_structure.jpg)
 ### Three pillars:
 **(1) sequential text modeling** meaning that the intrinsic sequential ordering as well as different areas of text might have an important implication on the corresponding tag(s),
 
