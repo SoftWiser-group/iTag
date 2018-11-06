@@ -20,6 +20,8 @@ Keras 2.1.6
 
 ## Model
 ### Three pillars:
-**(1) sequential text modeling ** meaning that the intrinsic sequential ordering as well as different areas of text might have an important implication on the corresponding tag(s) ,
+**(1) sequential text modeling** meaning that the intrinsic sequential ordering as well as different areas of text might have an important implication on the corresponding tag(s),
+
 **(2) tag correlation** meaning that the tags for a certain piece of textual content are often semantically correlated with each other,
+
 **(3) content-tag overlapping** meaning that the vocabularies of content and tags are overlapped
