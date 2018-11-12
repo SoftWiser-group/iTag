@@ -32,10 +32,11 @@ Keras 2.1.6
 ## Citing
 If you find ITag useful in your research, we ask that you cite the following paper:
 
->
->@inproceedings{
->author = {Shijie Tang, Yuan Yao, Suwei Zhang, Feng Xu, Tianxiao Gu, Hanghang Tong, Xiaohui Yan, Jian Lu},
->title = {An Integral Tag Recommendation Model for Textual Content},
->booktitle = {Proceedings of the 33rd National Conference on Artificial Intelligence},
->year = {2019},
->}
+```
+@inproceedings{
+author = {Shijie Tang, Yuan Yao, Suwei Zhang, Feng Xu, Tianxiao Gu, Hanghang Tong, Xiaohui Yan, Jian Lu},
+title = {An Integral Tag Recommendation Model for Textual Content},
+booktitle = {Proceedings of the 33rd National Conference on Artificial Intelligence},
+year = {2019},
+}
+```
