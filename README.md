@@ -2,10 +2,10 @@
 Implementation of **An Integral Tag Recommendation Model for Textual Content**.
 
 ## Requirements
-+Python 2.7
-+Numpy
-+Tensorflow 1.8.0
-+Keras 2.1.6
++ Python 2.7
++ Numpy
++ Tensorflow 1.8.0
++ Keras 2.1.6
 
 ## Repository contents
 
