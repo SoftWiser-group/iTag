@@ -1,11 +1,28 @@
 # iTag
-Implementation of **An Integral Tag Recommendation Model for Textual Content**.
+Implementation of the paper **An Integral Tag Recommendation Model for Textual Content**.
+
+## Intro
+ITag is a deep neural network model used to recommend tags for posts in community question answering websites.
+It take text as input and outputs top K recommendations.
+
+In this repository, we provide implementation of ITag model with Python Keras APIs.
 
 ## Requirements
-+ Python 2.7
-+ Numpy
-+ Tensorflow 1.8.0
-+ Keras 2.1.6
++ Python >= 2.7
++ Numpy >= 1.14.3
++ Tensorflow >= 1.8.0
++ Keras >= 2.1.6
+
+## Usage
+example usage:
+```
+python itag.py
+```
+This command will lead to a full training and prediction process.
+And at the same time, the weights of the model will be stored in the file **itag.h5**.
+
+If you want to evaluation the predicted results on the metrics **Recall@n**, **Precision@n** and **F1@n**,
+modify the parameter **MAX_LENGTH** in the itag.py because it is used to set the value of **n**.
 
 ## Repository contents
 
