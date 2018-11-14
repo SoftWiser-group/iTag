@@ -38,7 +38,7 @@ And at the same time, the weights of the model will be stored in the file **itag
 
 **(2) tag correlation** meaning that the tags for a certain piece of textual content are often semantically correlated with each other,
 
-**(3) content-tag overlapping** meaning that the vocabularies of content and tags are overlapped
+**(3) content-tag overlapping** meaning that the vocabularies of content and tags are overlapped.
 
 ## Citing
 If you find ITag useful in your research, we ask that you cite the following paper:
