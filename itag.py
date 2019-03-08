@@ -37,6 +37,8 @@ TOPIC_NUM = 100
 BEAM_SIZE = 3
 MAX_LENGTH = 5
 
+input_data_path = "XXX.npz"
+
 
 def mean_negative_log_probs(y_true, y_pred):
     '''
@@ -121,7 +123,7 @@ model.compile(optimizer='adam', loss=mean_negative_log_probs, metrics=[compute_p
 
 # load data
 (en_train, ms_train, de_train, y_train), (en_test, ms_test, de_test, y_test) = \
-    shared_dataset.load_data(path='../askubuntu/au_259740.npz', num_words=WORD_VOCAB, num_sfs=LABEL_VOCAB, start_sf=START_TOKEN, end_sf=END_TOKEN, sf_len=MAX_LABELS)
+    shared_dataset.load_data(path=input_data_path, num_words=WORD_VOCAB, num_sfs=LABEL_VOCAB, start_sf=START_TOKEN, end_sf=END_TOKEN, sf_len=MAX_LABELS)
 en_train = pad_sequences(en_train, padding='post', truncating='post', maxlen=MAX_WORDS)
 de_train = pad_sequences(de_train, padding='post', truncating='post', maxlen=MAX_LABELS)
 y_train = pad_sequences(y_train, padding='post', truncating='post', maxlen=MAX_LABELS)
