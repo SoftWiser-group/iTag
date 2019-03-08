@@ -31,6 +31,11 @@ And at the same time, the weights of the model will be stored in the file **itag
 |shared.txt|The file records the mapping between the id of the co-occurring words in the text vocabulary and the id in the tag vocabulary.|
 |utils.py|This file helps to obtain the one-hot representation of  tags.|
 
+## Datasets
+We didn't provide our data sets for the data of Stack Overflow, Ask Ubuntu and Mathematics is public.
+You could use your own data sets in numpy format. Just make sure the ".npz" file contains two arrays:
+one for textual features and another for related tags.
+
 ## Model
 ![Image text](https://github.com/SoftWiser-group/iTag/blob/master/images/structure.png)
 ### Three pillars:
