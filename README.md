@@ -33,8 +33,64 @@ And at the same time, the weights of the model will be stored in the file **itag
 
 ## Datasets
 We didn't provide our data sets for the data of Stack Overflow, Ask Ubuntu and Mathematics is public.
-You could use your own data sets in numpy format. Just make sure the ".npz" file contains two arrays:
-one for textual features and another for related tags.
+You could use your own data sets in numpy format. 
+
+Here are details:
+
+In shared_dataset.py, 'brs' refers to texts, 'sfs' refers to tags and 'ms' refers to masks. 'ms' is actually not used, so you could set it randomly, like [1, 0, 0, 0, 1, 1] and keep the length of 'ms' equals to the length of 'brs'.
+
+shared.txt contains a dictionary, which map the same word in texts and tags. In shared.txt, key is the id of a word and value is the id of a tag which is the same as the word.
+
+And finally, this example may help you:
+
+```
+shared.txt:
+
+{3:1,1:2}
+
+
+example.py:
+
+import numpy as np
+
+import shared_dataset as sh
+
+def create_data():
+
+    brs = np.array([[3, 1, 2, 4],[3,2,1,6],[6,7,1,5]])
+
+    ms = np.array([[0,1,0,1],[0,1,1,1],[1,1,0,0]])
+
+    sfs = np.array([[1,2],[1,2],[1]])                                 
+
+    np.savez('test.npz', brs=brs, ms=ms, sfs=sfs)
+
+def main():
+
+    (en_train, ms_train, de_train, y_train), (en_test, ms_test, de_test, y_test) = sh.load_data(path='test.npz', num_words=10000, num_sfs=1003)                      print(en_train)
+
+    print(ms_train)
+
+    print(de_train)
+
+    print(y_train)
+
+    print('--------------------------------')
+
+    print(en_test)
+
+    print(ms_test)
+
+    print(de_test)
+
+    print(y_test)
+
+if __name__ == '__main__':
+
+    create_data()
+
+    main()
+```
 
 ## Model
 ![Image text](https://github.com/SoftWiser-group/iTag/blob/master/images/structure.png)
