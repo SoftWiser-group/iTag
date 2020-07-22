@@ -67,7 +67,9 @@ def create_data():
 
 def main():
 
-    (en_train, ms_train, de_train, y_train), (en_test, ms_test, de_test, y_test) = sh.load_data(path='test.npz', num_words=10000, num_sfs=1003)                      print(en_train)
+    (en_train, ms_train, de_train, y_train), (en_test, ms_test, de_test, y_test) = sh.load_data(path='test.npz', num_words=10000, num_sfs=1003)                      
+    
+    print(en_train)
 
     print(ms_train)
 
